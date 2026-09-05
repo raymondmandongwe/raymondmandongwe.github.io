@@ -1,39 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Raymond Mandongwe — digital projects, web development and practical problem solving.">
-<title>Raymond Mandongwe — Digital Projects & Web</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
-<style>
-:root{--paper:#f3f1eb;--ink:#171716;--muted:#706e67;--line:#d5d1c7;--accent:#315c50;--max:1180px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 48px),var(--max));margin:auto}header{height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.mark{font:600 18px 'Space Grotesk',sans-serif;letter-spacing:-.04em}nav{display:flex;gap:30px;color:var(--muted);font-size:14px}nav a:hover{color:var(--ink)}.nav-contact{color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px}
-.hero{min-height:calc(100vh - 86px);display:grid;grid-template-columns:1.35fr .65fr;align-items:end;padding:90px 0 70px;gap:60px}.eyebrow,.number{font-size:12px;text-transform:uppercase;letter-spacing:.15em}.eyebrow{color:var(--accent);font-weight:600;margin:0 0 25px}h1,h2,h3{font-family:'Space Grotesk',sans-serif}h1{font-size:clamp(58px,8.3vw,108px);line-height:.92;letter-spacing:-.075em;font-weight:600;max-width:900px;margin:0}h1 span,h2 em{color:var(--muted);font-style:normal}.hero-copy{max-width:350px;padding-bottom:7px}.hero-copy p{font-size:17px;line-height:1.55;margin:0 0 27px;color:#4e4c46}.arrow-link{display:inline-flex;gap:10px;font-weight:600;font-size:14px;border-bottom:1px solid var(--ink);padding-bottom:6px}.arrow-link:after{content:'↗'}.scroll-note{margin-top:55px;color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
-section{border-top:1px solid var(--line);padding:105px 0}.section-head{display:grid;grid-template-columns:180px 1fr;gap:40px;margin-bottom:65px}.number{color:var(--muted)}h2{font-size:clamp(38px,5vw,64px);line-height:.98;letter-spacing:-.065em;margin:0;font-weight:600;max-width:780px}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;margin-left:220px}.about-grid p{font-size:19px;line-height:1.65;margin:0;color:#484741;max-width:560px}.facts,.timeline{border-top:1px solid var(--line)}.fact{display:flex;justify-content:space-between;gap:30px;padding:16px 0;border-bottom:1px solid var(--line);font-size:14px}.fact span{color:var(--muted)}
-.experience,.contact{display:grid;grid-template-columns:180px 1fr;gap:40px}.job{display:grid;grid-template-columns:150px 1fr;gap:35px;padding:28px 0;border-bottom:1px solid var(--line)}.job-date{font-size:13px;color:var(--muted)}.job h3{font-size:25px;letter-spacing:-.04em;margin:0 0 7px}.job-company{color:var(--accent);font-size:14px;margin-bottom:14px}.job p{color:#55534d;max-width:620px;margin:0;font-size:15px;line-height:1.65}
-.work-grid,.skills{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}.project{border-top:1px solid var(--line);padding:25px 0 38px;min-height:250px;display:flex;flex-direction:column;align-items:flex-start}.project:nth-child(3),.project:nth-child(4){border-bottom:1px solid var(--line)}.project-index{font-size:12px;color:var(--muted);letter-spacing:.12em}.project h3{font-size:34px;letter-spacing:-.055em;margin:22px 0 10px}.project p{max-width:470px;color:#55534d;font-size:15px;line-height:1.6;margin:0}.tags{margin-top:auto;padding-top:25px;color:var(--muted);font-size:11px;letter-spacing:.11em;text-transform:uppercase}.project-links{margin-top:18px}.project-links a{font-size:13px;font-weight:600;border-bottom:1px solid #999;padding-bottom:3px}.project-links a:hover{border-color:var(--ink)}.skill{padding:25px 0;border-top:1px solid var(--line)}.skill h3{font-size:23px;letter-spacing:-.04em;margin:0 0 7px}.skill p{color:var(--muted);font-size:14px;margin:0}
-.contact-main h2{max-width:720px}.contact-main p{color:var(--muted);font-size:16px;margin:30px 0}.contact-email{font:600 clamp(25px,4vw,48px) 'Space Grotesk',sans-serif;letter-spacing:-.055em;border-bottom:1px solid var(--ink);display:inline-block;padding-bottom:5px}footer{border-top:1px solid var(--line);padding:25px 0 35px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between}.fade{opacity:0;transform:translateY(18px);transition:.7s ease}.fade.visible{opacity:1;transform:none}
-@media(max-width:800px){.wrap{width:min(calc(100% - 36px),var(--max))}header{height:72px}nav{gap:17px;font-size:13px}nav a:nth-child(2){display:none}.hero{min-height:calc(100vh - 72px);display:block;padding:100px 0 55px}.hero-copy{margin-top:42px;max-width:520px}.scroll-note{margin-top:45px}section{padding:75px 0}.section-head,.experience,.contact{grid-template-columns:1fr;gap:18px;margin-bottom:45px}.about-grid{grid-template-columns:1fr;margin-left:0;gap:45px}.work-grid,.skills{grid-template-columns:1fr;gap:0}.project:nth-child(3),.project:nth-child(4){border-bottom:0}.project:last-child{border-bottom:1px solid var(--line)}.job{grid-template-columns:1fr;gap:8px}.job-date{order:-1}.contact-email{font-size:30px}footer{display:block}footer span{display:block;margin-top:8px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fade{transition:none}}
-</style>
-</head>
-<body>
-<div class="wrap"><header><a class="mark" href="#top">RM.</a><nav aria-label="Primary navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Work</a><a class="nav-contact" href="#contact">Contact</a></nav></header></div>
-<main id="top"><div class="wrap">
-<section class="hero" style="border-top:0"><div><p class="eyebrow">Cape Town · Digital projects · Web</p><h1>Raymond<br><span>Mandongwe.</span></h1></div><div class="hero-copy"><p>I build straightforward digital experiences, websites and project concepts — with a focus on making things useful, clear and well finished.</p><a class="arrow-link" href="#work">View selected work</a><div class="scroll-note">Scroll to explore ↓</div></div></section>
-<section id="about" class="fade"><div class="section-head"><div class="number">01 / About</div><h2>Curious by default.<br><em>Practical by nature.</em></h2></div><div class="about-grid"><p>I’m a hands-on digital creative who enjoys figuring out how things work and finding better ways to do them. My experience combines web projects, customer-facing work, operations and practical problem solving.</p><div class="facts"><div class="fact"><span>Based in</span><strong>Cape Town, South Africa</strong></div><div class="fact"><span>Focus</span><strong>Web · Digital · UX</strong></div><div class="fact"><span>Currently learning</span><strong>Python · Automation · UI/UX</strong></div><div class="fact"><span>Open to</span><strong>Digital & technology opportunities</strong></div></div></div></section>
-<section id="experience" class="fade"><div class="experience"><div class="number">02 / Experience</div><div class="timeline"><article class="job"><div class="job-date">Oct 2025 — Aug 2026</div><div><h3>Assistant Manager / General Worker</h3><div class="job-company">Serengeti Court</div><p>Supported day-to-day building operations, worked with contractors, helped coordinate maintenance tasks and handled practical problems as they came up. Also gained experience transporting stock and keeping operations moving.</p></div></article><article class="job"><div class="job-date">Dec 2024 — Apr 2025</div><div><h3>Part-time Retail Worker / Stock Taker</h3><div class="job-company">Retail Operations</div><p>Worked directly with customers while keeping stock organised, checking inventory and supporting the day-to-day running of the store.</p></div></article></div></div></section>
-<section id="work" class="fade"><div class="section-head"><div class="number">03 / Selected work</div><h2>Things I’ve built,<br><em>tested and explored.</em></h2></div><div class="work-grid">
-<article class="project"><div class="project-index">01</div><h3>Matcha</h3><p>A TypeScript web project focused on creating a polished, responsive digital experience — a good example of the direction I’m taking my frontend work.</p><div class="tags">TypeScript · Web · UI</div><div class="project-links"><a href="https://github.com/raymondmandongwe/matcha_web" target="_blank" rel="noopener">View repository ↗</a></div></article>
-<article class="project"><div class="project-index">02</div><h3>Pixelnode</h3><p>A digital product concept built around a modern brand, clear structure and a simple user experience. The project explores how an idea can become a complete web presence.</p><div class="tags">Brand · UX · Web</div></article>
-<article class="project"><div class="project-index">03</div><h3>Biff Lewis Logistics</h3><p>A business website project created to present a logistics company clearly online, with an emphasis on straightforward information and a professional customer experience.</p><div class="tags">HTML · Business · Web</div><div class="project-links"><a href="https://github.com/raymondmandongwe/Biff-lewis-logistics-" target="_blank" rel="noopener">View repository ↗</a></div></article>
-<article class="project"><div class="project-index">04</div><h3>Serengeti</h3><p>A website project inspired by real-world property and building operations — an area where I also have practical experience.</p><div class="tags">HTML · Operations · Web</div><div class="project-links"><a href="https://github.com/raymondmandongwe/Serengeti-" target="_blank" rel="noopener">View repository ↗</a></div></article>
-</div></section>
-<section class="fade"><div class="section-head"><div class="number">04 / Skills</div><h2>Tools are useful.<br><em>Problem solving matters more.</em></h2></div><div class="skills"><div class="skill"><h3>Frontend</h3><p>HTML · CSS · JavaScript · TypeScript</p></div><div class="skill"><h3>Design</h3><p>Figma · Canva · Adobe Creative Cloud · UI/UX</p></div><div class="skill"><h3>Workflow</h3><p>Git · GitHub · VS Code · project organisation</p></div><div class="skill"><h3>Exploring</h3><p>Python · automation · AI tools · digital products</p></div></div></section>
-<section id="contact" class="fade"><div class="contact"><div class="number">05 / Contact</div><div class="contact-main"><h2>Have a project,<br><em>opportunity or idea?</em></h2><p>I’m open to conversations around web development, digital projects and opportunities where I can learn, contribute and build.</p><a class="contact-email" href="mailto:raymondmandongwe@gmail.com">raymondmandongwe@gmail.com</a></div></div></section>
-</div></main>
-<div class="wrap"><footer><span>© 2026 Raymond Mandongwe</span><span>Built with HTML · CSS · JavaScript</span></footer></div>
-<script>const items=document.querySelectorAll('.fade');const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});items.forEach(i=>observer.observe(i));</script>
-</body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Raymond Mandongwe portfolio website." />
+    <title>Raymond Mandongwe | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="Raymond Mandongwe home">
+          <span class="brand-mark">RM</span>
+          <span class="brand-text">Raymond<br />Mandongwe</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="dot"></span> Digital creative / web / problem solver</p>
+            <h1>I build digital<br /><span>experiences that work.</span></h1>
+            <p class="lead">
+              I’m Raymond Mandongwe — a digital-focused creator and problem solver who enjoys building
+              practical web experiences, improving workflows, and turning ideas into useful technology.
+            </p>
+            <div class="hero-actions">
+              <a href="projects.html" class="btn btn-primary">View projects</a>
+              <a href="contact.html" class="btn btn-secondary">Contact me</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="card-frame">
+              <div class="card-badge">Digital / Tech / Product</div>
+              <div class="monogram">RM</div>
+              <p>Creating useful technology with clarity, purpose and a human focus.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section split-section">
+        <div class="container split-grid">
+          <div>
+            <p class="section-kicker">01 / Intro</p>
+            <h2>Building with <span>purpose and clarity.</span></h2>
+          </div>
+          <div>
+            <p>
+              My work sits at the intersection of technology, digital projects, customer support and
+              practical problem solving. I enjoy environments where I can learn fast, take ownership and
+              help turn ideas into useful experiences.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-box">
+              <strong>4+</strong>
+              <span>Years of practical experience</span>
+            </div>
+            <div class="stat-box">
+              <strong>12+</strong>
+              <span>Projects completed</span>
+            </div>
+            <div class="stat-box">
+              <strong>8</strong>
+              <span>Core skills built</span>
+            </div>
+            <div class="stat-box">
+              <strong>100%</strong>
+              <span>Always learning</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <p class="section-kicker">02 / Core strengths</p>
+          <h2>What I do <span>best.</span></h2>
+
+          <div class="feature-grid">
+            <article class="feature-item">
+              <span>01</span>
+              <h3>Web & digital design</h3>
+              <p>Designing clean, usable interfaces that balance visual quality with practical function.</p>
+            </article>
+            <article class="feature-item">
+              <span>02</span>
+              <h3>Technical problem solving</h3>
+              <p>Diagnosing issues, breaking them down logically and delivering effective solutions.</p>
+            </article>
+            <article class="feature-item">
+              <span>03</span>
+              <h3>Project support</h3>
+              <p>Helping move ideas from concept to execution with structure, focus and delivery.</p>
+            </article>
+            <article class="feature-item">
+              <span>04</span>
+              <h3>Client communication</h3>
+              <p>Working closely with people, clarifying requirements and turning requirements into action.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <a href="index.html" class="brand" aria-label="Raymond Mandongwe home">
+          <span class="brand-mark">RM</span>
+          <span class="brand-text">Raymond<br />Mandongwe</span>
+        </a>
+        <p>Digital creativity · Technology · Problem solving</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
